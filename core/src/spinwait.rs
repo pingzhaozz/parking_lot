@@ -46,7 +46,7 @@ impl SpinWait {
     /// to yielding the CPU to the OS after a few iterations.
     #[inline]
     pub fn spin(&mut self) -> bool {
-        if self.counter >= 10 {
+        if self.counter >= 15 {
             return false;
         }
         self.counter += 1;

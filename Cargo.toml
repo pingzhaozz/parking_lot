@@ -12,7 +12,7 @@ edition = "2018"
 rust-version = "1.49"
 
 [package.metadata.docs.rs]
-features = ["arc_lock", "serde", "deadlock_detection"]
+features = ["arc_lock", "serde", "deadlock_detection", "get_offset"]
 rustdoc-args = ["--generate-link-to-definition"]
 
 [dependencies]
@@ -34,6 +34,7 @@ deadlock_detection = ["parking_lot_core/deadlock_detection"]
 serde = ["lock_api/serde"]
 send_guard = []
 hardware-lock-elision = []
+get_offset = []
 
 [workspace]
 exclude = ["benchmark"]

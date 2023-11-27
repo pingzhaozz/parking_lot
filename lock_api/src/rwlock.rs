@@ -457,6 +457,7 @@ impl<R: RawRwLock, T: ?Sized> RwLock<R, T> {
     #[inline]
     pub fn read(&self) -> RwLockReadGuard<'_, R, T> {
         self.raw.lock_shared();
+
         // SAFETY: The lock is held, as required.
         unsafe { self.make_read_guard_unchecked() }
     }
