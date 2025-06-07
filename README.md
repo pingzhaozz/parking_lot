@@ -149,3 +149,11 @@ at your option.
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any
 additional terms or conditions.
+
+
+### Build & Run
+```
+docker build -t parking_lot .
+
+docker run --rm -it -v "$PWD":/app -w /app -e http_proxy=http://172.17.0.1:20171 -e https_proxy=http://172.17.0.1:20171 parking_lot
+```
